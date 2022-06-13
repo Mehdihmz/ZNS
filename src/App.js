@@ -13,6 +13,9 @@ const App = () => {
             <li> Contacts </li>
           </ul>
         </nav>
+        <footer>
+          Footer
+        </footer>
     </div>
   )
 }
