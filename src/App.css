@@ -1,7 +1,11 @@
-.App {
+.App h1{
     font-size: 65px;
     margin: 150px;
     color: teal;
+}
+
+p {
+    font-size: 40px;
 }
 
 .Navbar {
