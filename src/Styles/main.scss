@@ -7,8 +7,29 @@
 
 body {
     font-family: "Roboto";
-    background: $gray;
+    background: $light;
     overflow-x: hidden;
+}
+
+.just-web-flex {
+    display: none;
+    @media (min-width: 1000px) {
+        display: flex;
+    }
+}
+
+.just-web-block {
+    display: none;
+    @media (min-width: 1000px) {
+        display: block;
+    }
+}
+
+.just-phone {
+    display: block;
+    @media (min-width: 1000px) {
+        display: none;
+    }
 }
 
 .head-page {
