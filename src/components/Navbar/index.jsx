@@ -14,11 +14,16 @@ function Navbar() {
                 <a className="link" href=""> Регистрация </a>
                 <Dropdown>
                     <Dropdown.Toggle className="dropdownLang" id="">
-                        <i className=""></i>
+                        <i className="fal fa-angle-down"></i>
                     </Dropdown.Toggle>
+                    <Dropdown.Menu>
+                        <Dropdown.Item href=""> Ru </Dropdown.Item>
+                        <Dropdown.Item href=""> En </Dropdown.Item>
+                    </Dropdown.Menu>
                 </Dropdown>
-                
             </div>
         </div>
     )
 }
+
+export default Navbar
