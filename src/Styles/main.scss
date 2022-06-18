@@ -1,0 +1,149 @@
+@import "colors.scss" ;
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto";
+    background: $gray;
+    overflow-x: hidden;
+}
+
+.head-page {
+    position: relative;
+    overflow: hidden;
+    padding: 36px 0;
+    background: linear-gradient(90deg , #0f1015 0%, #0e0d1c 100% );
+    .navbar-head {
+        .logo {
+            img {
+                width: 60px;
+                height: 48px;
+                object-fit: contain;
+            }
+        }
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .dropdownLang {
+            background: none !important;
+            border: none !important;
+            outline: none !important;
+            box-shadow: none !important;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            i {
+                font-size: 20px;
+                margin: 0 5px;
+                margin-bottom: -3px;
+            }
+            &::after {
+                display: none;
+            }
+        }
+        .links-head {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .link {
+                &.btn {
+                    border: 1px solid $light;
+                    padding: 10px 18px;
+                    border-radius: 15px;
+                }
+                margin: 0 1.5rem;
+                color: $light;
+                text-decoration: none;
+            }
+            .toggle-sidebar {
+                display: none;
+                i {
+                    font-size: 40px;
+                    color: $light;
+                }
+            }
+        }
+    }
+    .header {
+        .layer-top {
+            width: 125px;
+            height: 164px;
+            left: 59px;
+            top: -113px;
+            position: absolute;
+            background: linear-gradient(20.16deg, #00123f -30.06%, #194484 43.68%, #39aac2 123.84%);
+            filter: blur(140px);
+        }
+        .layer-right {
+            right: -160px;
+            bottom: -100px;
+            width: 380px;
+            height: 499px;
+            position: absolute;
+            background: linear-gradient(
+                90.2deg,
+                rgba(108, 185, 255, 0.184) 0.15%,
+                rgba(91, 210, 236, 0.4) 25.44%,
+                rgba(131, 240, 240, 0.4) 48.89%,
+                rgba(161, 241, 246, 0.4) 68.2%,
+                rgba(203, 255, 243, 0.4) 88.43%
+            );
+            filter: blur(240px);
+            transform: rotate(26.68deg);
+        }
+        padding-left: 7rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 70px;
+        .left {
+            h2 {
+                font-size: 40px;
+                font-weight: bold;
+                line-height: 51px;
+                background: linear-gradient(
+                    90.2deg,
+                    #54aaf9 0.15%,
+                    #47d7e0 19.46%,
+                    #83f0f0 48.89%,
+                    #a1f1f6 71.88%,
+                    #97f5d4 88.43%
+                );
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+            }
+            p {
+                color: $light;
+                font-family: "Lato";
+                font-style: normal;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 140%;
+                margin: 32px 0;
+            }
+            a {
+                margin-top: 6px;
+                border: 1.5px solid $light;
+                padding: 15px 35px;
+                border-radius: 16px;
+                color: $light;
+                @media (max-width: 380px) {
+                    font-size: 10px;
+                }
+                text-decoration: none;
+            }
+        }
+        .right {
+            overflow: hidden;
+            text-align: right;
+            img {
+                height: 512px;
+                object-fit: contain;
+            }
+        }
+    }
+}

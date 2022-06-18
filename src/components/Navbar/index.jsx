@@ -5,22 +5,26 @@ function Navbar() {
     return (
         <div className="navbar-head">
             <div className="logo">
-                <img src="/public/images/logo.svg" alt="" />
+                <img src="./images/logo.svg" alt="" />
             </div>
             <div className="links-head">
                 <a className="link" href=""> Функции </a>
                 <a className="link" href=""> Контакты </a>
                 <a className="link" href=""> Вход </a>
-                <a className="link" href=""> Регистрация </a>
+                <a className="btn link" href=""> Регистрация </a>
                 <Dropdown>
-                    <Dropdown.Toggle className="dropdownLang" id="">
+                    <Dropdown.Toggle className="dropdownLang" id="dropdown-basic">
+                        <span>Ru</span>
                         <i className="fal fa-angle-down"></i>
                     </Dropdown.Toggle>
                     <Dropdown.Menu>
-                        <Dropdown.Item href=""> Ru </Dropdown.Item>
-                        <Dropdown.Item href=""> En </Dropdown.Item>
+                        <Dropdown.Item href="#/action-1"> Ru </Dropdown.Item>
+                        <Dropdown.Item href="#/action-2"> En </Dropdown.Item>
                     </Dropdown.Menu>
                 </Dropdown>
+                <div className="toggle-sidebar">
+                    <i className="fal fa-bars"></i>
+                </div>
             </div>
         </div>
     )

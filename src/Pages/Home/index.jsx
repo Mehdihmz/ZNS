@@ -1,14 +1,16 @@
 import React , { Fragment } from "react";
-import { Navbar } from '../../components'
+import { Navbar ,Header } from '../../components'
 function Home() {
     return (
         <Fragment>
-            <header>
-                <div className="head-page">
+            <header  className="head-page">
+                <div className="px-4">
                     <Navbar />
                 </div>
+                <Header />
             </header>
         </Fragment>
     ) 
     
 }
+export default Home
