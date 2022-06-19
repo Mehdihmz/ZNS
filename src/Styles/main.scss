@@ -41,7 +41,7 @@ body {
     padding: 36px 0;
     background: linear-gradient(90deg , #0f1015 0%, #0e0d1c 100% );
     .navbar-head {
-        @media (max-width: 767) {
+        @media (max-width: 767px) {
             .dropdownLang {
             display: none !important;
             }
@@ -78,7 +78,7 @@ body {
             align-items: center;
             justify-content: center;
             .link {
-                @media (max-width: 767) {
+                @media (max-width: 767px) {
                     display: none !important;
                 }
                 &.btn {
