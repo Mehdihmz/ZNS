@@ -4,7 +4,7 @@ function Home() {
     return (
         <Fragment>
             <header  className="head-page">
-                <div className="px-4">
+                <div className="px-4 container-lg">
                     <Navbar />
                 </div>
                 <Header />

@@ -5,7 +5,7 @@ function Navbar() {
     return (
         <div className="navbar-head">
             <div className="logo">
-                <img src="./images/logo.svg" alt="" />
+                <img src="./images/logo.svg" alt="ZNS" />
             </div>
             <div className="links-head">
                 <a className="link" href=""> Функции </a>
