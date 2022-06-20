@@ -41,22 +41,22 @@ function Home() {
                                     <img className="icon" src="./images/WhatsApp.svg" alt="image" />
                                 </Col>
                                 <Col xs={3} className="box-img">
-                                    <img className="icon" src="./images/user1.jfif" alt="image" />
+                                    <img src="./images/user1.jfif" alt="image" />
                                 </Col>
                                 <Col xs={3} className="box-img">
                                     <img className="icon" src="./images/LinkedIN.svg" alt="image" />
                                 </Col>
                                 <Col xs={3} className="box-img">
-                                    <img className="icon" src="./images/user3.jfif" alt="image" />
+                                    <img src="./images/user3.jfif" alt="image" />
                                 </Col>
                                 <Col xs={3} className="box-img">
-                                    <img className="icon" src="./images/user2.jfif" alt="image" />
+                                    <img src="./images/user2.jfif" alt="image" />
                                 </Col>
                                 <Col xs={3} className="box-img">
                                     <img className="icon" src="./images/Telegram.svg" alt="image" />
                                 </Col>
                                 <Col xs={3} className="box-img">
-                                    <img className="icon" src="./images/user4.jfif" alt="image" />
+                                    <img src="./images/user4.jfif" alt="image" />
                                 </Col>
                                 <Col xs={3} className="box-img">
                                     <img className="icon" src="./images/INST.svg" alt="image" />
@@ -65,13 +65,13 @@ function Home() {
                                     <img className="icon" src="./images/Skype.svg" alt="image" />
                                 </Col>
                                 <Col xs={3} className="box-img">
-                                    <img className="icon" src="./images/user5.jfif" alt="image" />
+                                    <img src="./images/user5.jfif" alt="image" />
                                 </Col>
                                 <Col xs={3} className="box-img">
                                     <img className="icon" src="./images/Outlook.svg" alt="image" />
                                 </Col>
                                 <Col xs={3} className="box-img">
-                                    <img className="icon" src="./images/user6.jfif" alt="image" />
+                                    <img src="./images/user6.jfif" alt="image" />
                                 </Col>
                             </Row>
                         </Col>
