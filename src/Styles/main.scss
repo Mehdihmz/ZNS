@@ -251,3 +251,29 @@ body {
     }
 }
 
+.section-tow {
+    background: linear-gradient(90deg, #0F1015 0%, #0E0D1C 100%);;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    .map {
+        object-fit: contain;
+        width: 100%;
+    }
+    .description {
+        right: 5px;
+        bottom: 10px;
+        padding: 10px;
+        position: absolute;
+        h4 {
+            color: $light;
+            font-size: 24px;
+            font-weight: 700;
+        }
+        p {
+            color: $light;
+            font-size: 18px;
+        }
+    }
+}
