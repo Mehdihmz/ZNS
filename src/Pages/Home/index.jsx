@@ -78,6 +78,17 @@ function Home() {
                     </div>
                 </Container>
             </section>
+            <section className="section-tow">
+                <img src="./images/map.svg" className="map" alt="" />
+                <div className="description">
+                    <h4>Найдите нужного человека, <br />
+                    даже если забыли его имя. 
+                    </h4>
+                    <p>Просто введите место или время когда<br />
+                     контакт был записан и ZNS найдет его.
+                     </p>
+                </div>
+            </section>
         </Fragment>
     ) 
     
