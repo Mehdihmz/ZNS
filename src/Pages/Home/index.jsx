@@ -9,6 +9,8 @@ function Home() {
                 </div>
                 <Header />
             </header>
+            <section className="section-one">
+                </section>
         </Fragment>
     ) 
     
