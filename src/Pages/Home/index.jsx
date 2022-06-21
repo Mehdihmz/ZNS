@@ -89,6 +89,64 @@ function Home() {
                      </p>
                 </div>
             </section>
+            <section className="section-three">
+                <Container>
+                    <div className="title text-center">
+                        <h3>Вместе с ZNS Вы сможете:</h3>
+                    </div>
+                    <Row className="just-web-flex justify-content-between align-items-center">
+                        <Col lg={5}>
+                            <div className="item-question">
+                                <img src="./images/group-fill.svg" className="icon" alt="icon" />
+                                <div className="content">
+                                    <h4>Совместно работать с контактами</h4>
+                                    <p>Не следует, однако забывать, что постоянное информационно-пропагандистское обеспечение нашей Не следует, однако забывать, что постоянное информационно-пропагандистское </p>
+                                </div>
+                            </div>
+                            <div className="item-question">
+                                <img src="./images/map-pin-user-fill.svg" className="icon" alt="icon" />
+                                <div className="content">
+                                    <h4>Легко найти нужного вам человека</h4>
+                                    <p>Не следует, однако забывать, что постоянное информационно-пропагандистское обеспечение нашей Не следует, однако забывать, что постоянное информационно-пропагандистское </p>
+                                </div>
+                            </div>
+                            <div className="item-question">
+                                <img src="./images/draft-fill.svg" className="icon" alt="icon" />
+                                <div className="content">
+                                    <h4>Создавать заметки и делиться ими</h4>
+                                    <p>Не следует, однако забывать, что постоянное информационно-пропагандистское обеспечение нашей Не следует, однако забывать, что постоянное информационно-пропагандистское </p>
+                                </div>
+                            </div>
+                        </Col>
+                        <Col lg={5}>
+                            <div className="item-question">
+                                <img src="./images/question-answer-fill.svg" className="icon" alt="icon" />
+                                <div className="content">
+                                    <h4>Собрать все переписки в одном месте</h4>
+                                    <p>Не следует, однако забывать, что постоянное информационно-пропагандистское обеспечение нашей Не следует, однако забывать, что постоянное информационно-пропагандистское </p>
+                                </div>
+                            </div>
+                            <div className="item-question">
+                                <img src="./images/calendar-2-fill.svg" className="icon" alt="icon" />
+                                <div className="content">
+                                    <h4>Делиться своими планами</h4>
+                                    <p>Не следует, однако забывать, что постоянное информационно-пропагандистское обеспечение нашей Не следует, однако забывать, что постоянное информационно-пропагандистское </p>
+                                </div>
+                            </div>
+                            <div className="item-question">
+                                <img src="./images/group-fill.svg" className="icon" alt="icon" />
+                                <div className="content">
+                                    <h4>Совместно работать с контактами</h4>
+                                    <p>Не следует, однако забывать, что постоянное информационно-пропагандистское обеспечение нашей Не следует, однако забывать, что постоянное информационно-пропагандистское </p>
+                                </div>
+                            </div>
+                        </Col>
+                    </Row>
+                </Container>
+                <div className="">
+                    
+                </div>
+            </section>
         </Fragment>
     ) 
     
