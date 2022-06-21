@@ -143,9 +143,20 @@ function Home() {
                         </Col>
                     </Row>
                 </Container>
-                <div className="">
-                    
-                </div>
+                <section className="section-four">
+                    <Container>
+                        <div className="title text-center">
+                            <h3>Почему стоит выбрать ZNS?</h3>
+                            <span>Посмотрите 5-минутное видео о преимуществах нашей платформы </span>
+                        </div>
+                        <div className="video-box">
+                            <div className="control">
+                            <i className="fas fa-play"></i>
+                            </div>
+                            <video controls={false} src=""></video>
+                        </div>
+                    </Container>
+                </section>
             </section>
         </Fragment>
     ) 
