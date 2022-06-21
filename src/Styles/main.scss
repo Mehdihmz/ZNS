@@ -277,3 +277,32 @@ body {
         }
     }
 }
+
+.section-three {
+    padding: 3rem 0;
+    .title {
+        margin: 4rem auto;
+        .h3 {
+            font-style: 32px !important;
+            font-weight: bold;
+        }
+    }
+    .item-question {
+        display: flex;
+        align-items: flex-start;
+        .icon {
+            width: 40px;
+            height: 40px;
+        }
+        .content {
+            margin-left: 16px;
+            h4 {
+                font-size: 24px;
+                font-weight: 700;
+            }
+            o {
+                font-style: 14px;
+            }
+        }
+    }
+}
