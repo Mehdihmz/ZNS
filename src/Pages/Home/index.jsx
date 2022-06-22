@@ -172,6 +172,47 @@ function Home() {
                     </Row>
                 </Container>
             </section>
+            <footer>
+                <Container>
+                    <Row>
+                        <Col lg={9} className="left">
+                            <div className="d-flex">
+                                <a href="/">Политика конфиденциальности</a>
+                                <a href="/">Пользовательское соглашение</a>
+                                <a href="/">Контакты</a>
+                            </div>
+                            <span>© 2004–2021 ZNS</span>
+                            <span>OOO «ZBORKA NETWORK SYSTEM» юр.адрес: 220020, Минск, пр. Победителей, 100, оф. 203</span>
+                            <span>В торговом реестре с 23 июня 2010 г., № регистрации 156473, УНП 190806803, регистрация №190806803, 22.02.2007, Мингорисполком.</span>
+                            <span>E-mail: info@zns.by</span>
+                        </Col>
+                        <Col lg={3} className="right">
+                            <div className="logo">
+                                <a href="/">
+                                    <img src="./images/logo.svg" alt="" />
+                                    <span className="line-gradient"></span>
+                                    <div className="name">
+                                        <span>ZBORKA</span>
+                                        <span>NETWORK</span>
+                                        <span>SYSTEM</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div className="social-network">
+                                <a href="/">
+                                    <img src="./images/facebook.svg" alt="" />
+                                </a>
+                                <a href="/">
+                                    <img src="./images/tel.svg" alt="" />
+                                </a>
+                                <a href="/">
+                                    <img src="./images/instagram.svg" alt="" />
+                                </a>
+                            </div>
+                        </Col>
+                    </Row>
+                </Container>
+            </footer>
         </Fragment>
     ) 
     
