@@ -353,3 +353,27 @@ body {
     }
 }
 
+.section-five {
+    background: url("../../public/images/cover_app.jfif");
+    padding: 8rem 1rem;
+    color: $light;
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    h2 {
+        margin-bottom: 18px;
+    }
+    p {
+        margin-bottom: 40px;
+    }
+    a {
+        margin-right: 16px;
+        img {
+            width: 125px;
+            height: 40px;
+            object-fit: contain;
+        }
+    }
+}
+

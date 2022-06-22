@@ -165,7 +165,7 @@ function Home() {
                             <h2>Скачай приложение ZNS на iOS или Android </h2>
                             <p>Скачайте ZNS и присоединяйтесь к десяткам миллионов пользователей. Оцените удобный сервис общения, поиска контактов и планирования своих задач.</p>
                             <div className="links">
-                                <a href="/"><img src="./images/appstore.svg" alt="" /></a>
+                                <a href="/"><img src="./images/AppleAppStore.svg" alt="" /></a>
                                 <a href="/"><img src="./images/googleplay.svg" alt="" /></a>
                             </div>
                         </Col>
