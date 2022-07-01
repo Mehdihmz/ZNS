@@ -1,12 +1,17 @@
-import React , { Fragment } from "react";
-import { Col , Container , Row} from 'react-bootstrap'
-import { Navbar ,Header } from '../../components'
+import React, { Fragment ,useState} from "react";
+import { Col, Container, Row } from 'react-bootstrap'
+import { Navbar, Header } from '../../components'
+import ModalAuth from "./Components/ModalAuth";
 function Home() {
+
+    const [showAuth, setshowAuth] = useState(false)
+
     return (
         <Fragment>
-            <header  className="head-page">
+            <ModalAuth show={showAuth} onHide={() => { setshowAuth(false) }} />
+            <header className="head-page">
                 <div className="px-4 container-lg">
-                    <Navbar />
+                    <Navbar showModal={() => { setshowAuth(true) }} />
                 </div>
                 <Header />
             </header>
@@ -15,11 +20,11 @@ function Home() {
                     <div className="text-center">
                         <div className="wraper">
                             <h3> ZNS - что это? </h3>
-                            <p> Мы создали удобную платформу 
-                                для вашей работы с контактами, 
-                                задачами и планами. Воплотили в 
+                            <p> Мы создали удобную платформу
+                                для вашей работы с контактами,
+                                задачами и планами. Воплотили в
                                 реальность .....................
-                                ............ 
+                                ............
                             </p>
                         </div>
                     </div>
@@ -27,12 +32,12 @@ function Home() {
                         <Col lg={3} className="left order-lg-1 order-2">
                             <h4>Все ваши контакты. <br />
                                 Из всех социальных сетей. <br />
-                                 В ZNS
+                                В ZNS
                             </h4>
                             <p>
-                            Объединяйте все ваши контакты из <br /> 
-                            социальных сетей, мессенджеров и <br />
-                            почты в одном удобном приложении.
+                                Объединяйте все ваши контакты из <br />
+                                социальных сетей, мессенджеров и <br />
+                                почты в одном удобном приложении.
                             </p>
                         </Col>
                         <Col lg={8} className="right order-lg-2 order-1">
@@ -82,11 +87,11 @@ function Home() {
                 <img src="./images/map.svg" className="map" alt="" />
                 <div className="description">
                     <h4>Найдите нужного человека, <br />
-                    даже если забыли его имя. 
+                        даже если забыли его имя.
                     </h4>
                     <p>Просто введите место или время когда<br />
-                     контакт был записан и ZNS найдет его.
-                     </p>
+                        контакт был записан и ZNS найдет его.
+                    </p>
                 </div>
             </section>
             <section className="section-three">
@@ -143,20 +148,20 @@ function Home() {
                         </Col>
                     </Row>
                 </Container>
-                <section className="section-four">
-                    <Container>
-                        <div className="title text-center">
-                            <h3>Почему стоит выбрать ZNS?</h3>
-                            <span>Посмотрите 5-минутное видео о преимуществах нашей платформы </span>
-                        </div>
-                        <div className="video-box">
-                            <div className="control">
+            </section>
+            <section className="section-four">
+                <Container>
+                    <div className="title text-center">
+                        <h3>Почему стоит выбрать ZNS?</h3>
+                        <span>Посмотрите 5-минутное видео о преимуществах нашей платформы </span>
+                    </div>
+                    <div className="video-box">
+                        <div className="control">
                             <i className="fas fa-play"></i>
-                            </div>
-                            <video controls={false} src=""></video>
                         </div>
-                    </Container>
-                </section>
+                        <video controls={false} src=""></video>
+                    </div>
+                </Container>
             </section>
             <section className="section-five">
                 <Container>
@@ -176,7 +181,7 @@ function Home() {
                 <Container>
                     <Row>
                         <Col lg={9} className="left">
-                            <div className="d-flex">
+                            <div className='d-flex'>
                                 <a href="/">Политика конфиденциальности</a>
                                 <a href="/">Пользовательское соглашение</a>
                                 <a href="/">Контакты</a>
@@ -187,9 +192,9 @@ function Home() {
                             <span>E-mail: info@zns.by</span>
                         </Col>
                         <Col lg={3} className="right">
-                            <div className="logo">
+                            <div className='logo'>
                                 <a href="/">
-                                    <img src="./images/logo.svg" alt="" />
+                                    <img src='./images/logo.svg' alt='' />
                                     <span className="line-gradient"></span>
                                     <div className="name">
                                         <span>ZBORKA</span>
@@ -198,7 +203,7 @@ function Home() {
                                     </div>
                                 </a>
                             </div>
-                            <div className="social-network">
+                            <div className='social-networks'>
                                 <a href="/">
                                     <img src="./images/facebook.svg" alt="" />
                                 </a>
@@ -214,7 +219,7 @@ function Home() {
                 </Container>
             </footer>
         </Fragment>
-    ) 
-    
+    )
+
 }
 export default Home
