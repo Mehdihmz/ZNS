@@ -1,7 +1,7 @@
 import React from "react";
 import { Dropdown } from 'react-bootstrap'
 
-function Navbar() {
+function Navbar({ showModal }) {
     return (
         <div className="navbar-head">
             <div className="logo">
@@ -10,8 +10,8 @@ function Navbar() {
             <div className="links-head">
                 <a className="link" href=""> Функции </a>
                 <a className="link" href=""> Контакты </a>
-                <a className="link" href=""> Вход </a>
-                <a className="btn link" href=""> Регистрация </a>
+                <a className="link" href=""> Log in </a>
+                <a className="btn link" onClick={showModal}> Register </a>
                 <Dropdown>
                     <Dropdown.Toggle className="dropdownLang" id="dropdown-basic">
                         <span>Ru</span>
