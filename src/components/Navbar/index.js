@@ -10,8 +10,8 @@ function Navbar({ showModal }) {
             <div className="links-head">
                 <a className="link" href=""> Функции </a>
                 <a className="link" href=""> Контакты </a>
-                <a className="link" href=""> Log in </a>
-                <a className="btn link" onClick={showModal}> Register </a>
+                <a className='link' href=""> Вход </a>
+                <a className="btn link" onClick={showModal}> Регистрация </a>
                 <Dropdown>
                     <Dropdown.Toggle className="dropdownLang" id="dropdown-basic">
                         <span>Ru</span>
@@ -31,3 +31,4 @@ function Navbar({ showModal }) {
 }
 
 export default Navbar
+

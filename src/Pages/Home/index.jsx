@@ -1,14 +1,14 @@
-import React, { Fragment ,useState} from "react";
-import { Col, Container, Row } from 'react-bootstrap'
+import React, { Fragment, useState } from "react";
+import { Col, Container, Row } from 'react-bootstrap';
+import  Bootstrap  from 'react-bootstrap';
 import { Navbar, Header } from '../../components'
 import ModalAuth from "./Components/ModalAuth";
 function Home() {
 
     const [showAuth, setshowAuth] = useState(false)
-
     return (
         <Fragment>
-            <ModalAuth show={showAuth} onHide={() => { setshowAuth(false) }} />
+              <ModalAuth show={showAuth} onHide={() => { setshowAuth(false) }} />
             <header className="head-page">
                 <div className="px-4 container-lg">
                     <Navbar showModal={() => { setshowAuth(true) }} />
@@ -220,6 +220,6 @@ function Home() {
             </footer>
         </Fragment>
     )
-
 }
+
 export default Home
