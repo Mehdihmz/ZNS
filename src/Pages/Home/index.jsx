@@ -160,9 +160,6 @@ function Home() {
                     </Splide>
 
                 </Container>
-
-
-
             </section>
             <section className="section-five">
                 <Container>
