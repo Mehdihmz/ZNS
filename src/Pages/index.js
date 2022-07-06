@@ -1,8 +1,7 @@
 import Home from './Home'
 import SignUp from './Auth/SignUp'
-import  Bootstrap  from 'react-bootstrap';
+import Login from './Auth/Login'
 
 
 
-
-export  { Home,SignUp }
+export  { Home,SignUp,Login }
