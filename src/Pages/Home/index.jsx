@@ -1,18 +1,20 @@
+import { Splide, SplideSlide } from "@splidejs/react-splide";
 import React, { Fragment, useState } from "react";
-import { Col, Container, Row } from 'react-bootstrap';
-import  Bootstrap  from 'react-bootstrap';
+import { Col, Container, Row } from 'react-bootstrap'
 import { Navbar, Header } from '../../components'
 import ModalAuth from "./Components/ModalAuth";
 function Home() {
 
     const [showAuth, setshowAuth] = useState(false)
+
+
+
+
     return (
         <Fragment>
-              <ModalAuth show={showAuth} onHide={() => { setshowAuth(false) }} />
+            <ModalAuth show={showAuth} onHide={() => { setshowAuth(false) }} />
             <header className="head-page">
-                <div className="px-4 container-lg">
-                    <Navbar showModal={() => { setshowAuth(true) }} />
-                </div>
+                <Navbar showModal={() => { setshowAuth(true) }} />
                 <Header />
             </header>
             <section className="section-one">
@@ -42,6 +44,16 @@ function Home() {
                         </Col>
                         <Col lg={8} className="right order-lg-2 order-1">
                             <Row>
+                                {/* {users.map(
+                                    (user, i) => {
+                                        
+                                        return (
+                                            <Col key={i} xs={3} className="box-img">
+                                                <img className="icon" src="./images/WhatsApp.svg" alt="image" />
+                                            </Col>
+                                        )
+                                    }
+                                )} */}
                                 <Col xs={3} className="box-img">
                                     <img className="icon" src="./images/WhatsApp.svg" alt="image" />
                                 </Col>
@@ -89,9 +101,10 @@ function Home() {
                     <h4>Найдите нужного человека, <br />
                         даже если забыли его имя.
                     </h4>
-                    <p>Просто введите место или время когда<br />
-                        контакт был записан и ZNS найдет его.
+                    <p>Просто введите место или время когда
+                        контакт был <br /> записан и ZNS найдет его.
                     </p>
+                    <a href="" className="btn-active">Бесплатная регистрация</a>
                 </div>
             </section>
             <section className="section-three">
@@ -99,73 +112,75 @@ function Home() {
                     <div className="title text-center">
                         <h3>Вместе с ZNS Вы сможете:</h3>
                     </div>
-                    <Row className="just-web-flex justify-content-between align-items-center">
-                        <Col lg={5}>
-                            <div className="item-question">
-                                <img src="./images/group-fill.svg" className="icon" alt="icon" />
+                    <Splide options={{
+                        pagination: false,
+                        arrows: false,
+                        perPage: 4,
+                        breakpoints: {
+                            700: {
+                                perPage: 1,
+                            },
+                            900: {
+                                perPage: 2,
+                            },
+                            1024: {
+                                perPage: 3,
+                            }
+                        }
+                    }}>
+                        <SplideSlide>
+                            <div className="card-info">
+                                <div className="layer-light light-5"></div>
+                                <div className="layer-light light-6"></div>
                                 <div className="content">
-                                    <h4>Совместно работать с контактами</h4>
-                                    <p>Не следует, однако забывать, что постоянное информационно-пропагандистское обеспечение нашей Не следует, однако забывать, что постоянное информационно-пропагандистское </p>
+                                    <h5 className="title">Легко найти нужного вам человека</h5>
+                                    <p className="description">Не следует, однако забывать, что постоянное информационно-пропагандистское обеспечение нашей Не следует, однако забывать, что постоянное информационно-пропагандистское</p>
                                 </div>
                             </div>
-                            <div className="item-question">
-                                <img src="./images/map-pin-user-fill.svg" className="icon" alt="icon" />
+                        </SplideSlide>
+                        <SplideSlide>
+                            <div className="card-info">
+                                <div className="layer-light light-3"></div>
+                                <div className="layer-light light-4"></div>
                                 <div className="content">
-                                    <h4>Легко найти нужного вам человека</h4>
-                                    <p>Не следует, однако забывать, что постоянное информационно-пропагандистское обеспечение нашей Не следует, однако забывать, что постоянное информационно-пропагандистское </p>
+                                    <h5 className="title">Легко найти нужного вам человека</h5>
+                                    <p className="description">Не следует, однако забывать, что постоянное информационно-пропагандистское обеспечение нашей Не следует, однако забывать, что постоянное информационно-пропагандистское</p>
                                 </div>
                             </div>
-                            <div className="item-question">
-                                <img src="./images/draft-fill.svg" className="icon" alt="icon" />
+                        </SplideSlide>
+                        <SplideSlide>
+                            <div className="card-info">
+                                <div className="layer-light light-2"></div>
                                 <div className="content">
-                                    <h4>Создавать заметки и делиться ими</h4>
-                                    <p>Не следует, однако забывать, что постоянное информационно-пропагандистское обеспечение нашей Не следует, однако забывать, что постоянное информационно-пропагандистское </p>
+                                    <h5 className="title">Легко найти нужного вам человека</h5>
+                                    <p className="description">Не следует, однако забывать, что постоянное информационно-пропагандистское обеспечение нашей Не следует, однако забывать, что постоянное информационно-пропагандистское</p>
+                                </div>
+
+                            </div>
+                        </SplideSlide>
+                        <SplideSlide>
+                            <div className="card-info">
+                                <div className="layer-light light-1"></div>
+                                <div className="content">
+                                    <h5 className="title">Легко найти нужного вам человека</h5>
+                                    <p className="description">Не следует, однако забывать, что постоянное информационно-пропагандистское обеспечение нашей Не следует, однако забывать, что постоянное информационно-пропагандистское</p>
                                 </div>
                             </div>
-                        </Col>
-                        <Col lg={5}>
-                            <div className="item-question">
-                                <img src="./images/question-answer-fill.svg" className="icon" alt="icon" />
-                                <div className="content">
-                                    <h4>Собрать все переписки в одном месте</h4>
-                                    <p>Не следует, однако забывать, что постоянное информационно-пропагандистское обеспечение нашей Не следует, однако забывать, что постоянное информационно-пропагандистское </p>
-                                </div>
-                            </div>
-                            <div className="item-question">
-                                <img src="./images/calendar-2-fill.svg" className="icon" alt="icon" />
-                                <div className="content">
-                                    <h4>Делиться своими планами</h4>
-                                    <p>Не следует, однако забывать, что постоянное информационно-пропагандистское обеспечение нашей Не следует, однако забывать, что постоянное информационно-пропагандистское </p>
-                                </div>
-                            </div>
-                            <div className="item-question">
-                                <img src="./images/group-fill.svg" className="icon" alt="icon" />
-                                <div className="content">
-                                    <h4>Совместно работать с контактами</h4>
-                                    <p>Не следует, однако забывать, что постоянное информационно-пропагандистское обеспечение нашей Не следует, однако забывать, что постоянное информационно-пропагандистское </p>
-                                </div>
-                            </div>
-                        </Col>
-                    </Row>
+                        </SplideSlide>
+                    </Splide>
+
                 </Container>
-            </section>
-            <section className="section-four">
-                <Container>
-                    <div className="title text-center">
-                        <h3>Почему стоит выбрать ZNS?</h3>
-                        <span>Посмотрите 5-минутное видео о преимуществах нашей платформы </span>
-                    </div>
-                    <div className="video-box">
-                        <div className="control">
-                            <i className="fas fa-play"></i>
-                        </div>
-                        <video controls={false} src=""></video>
-                    </div>
-                </Container>
+
+
+
             </section>
             <section className="section-five">
                 <Container>
                     <Row className="justify-content-end">
+                        <Col lg={8} className="phones">
+                            <img src="./images/Iphone.svg" alt="" />
+                            <div className="layer-light" />
+                        </Col>
                         <Col lg={4}>
                             <h2>Скачай приложение ZNS на iOS или Android </h2>
                             <p>Скачайте ZNS и присоединяйтесь к десяткам миллионов пользователей. Оцените удобный сервис общения, поиска контактов и планирования своих задач.</p>
@@ -177,49 +192,8 @@ function Home() {
                     </Row>
                 </Container>
             </section>
-            <footer>
-                <Container>
-                    <Row>
-                        <Col lg={9} className="left">
-                            <div className='d-flex'>
-                                <a href="/">Политика конфиденциальности</a>
-                                <a href="/">Пользовательское соглашение</a>
-                                <a href="/">Контакты</a>
-                            </div>
-                            <span>© 2004–2021 ZNS</span>
-                            <span>OOO «ZBORKA NETWORK SYSTEM» юр.адрес: 220020, Минск, пр. Победителей, 100, оф. 203</span>
-                            <span>В торговом реестре с 23 июня 2010 г., № регистрации 156473, УНП 190806803, регистрация №190806803, 22.02.2007, Мингорисполком.</span>
-                            <span>E-mail: info@zns.by</span>
-                        </Col>
-                        <Col lg={3} className="right">
-                            <div className='logo'>
-                                <a href="/">
-                                    <img src='./images/logo.svg' alt='' />
-                                    <span className="line-gradient"></span>
-                                    <div className="name">
-                                        <span>ZBORKA</span>
-                                        <span>NETWORK</span>
-                                        <span>SYSTEM</span>
-                                    </div>
-                                </a>
-                            </div>
-                            <div className='social-networks'>
-                                <a href="/">
-                                    <img src="./images/facebook.svg" alt="" />
-                                </a>
-                                <a href="/">
-                                    <img src="./images/tel.svg" alt="" />
-                                </a>
-                                <a href="/">
-                                    <img src="./images/instagram.svg" alt="" />
-                                </a>
-                            </div>
-                        </Col>
-                    </Row>
-                </Container>
-            </footer>
         </Fragment>
     )
-}
 
+}
 export default Home
