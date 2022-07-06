@@ -44,16 +44,6 @@ function Home() {
                         </Col>
                         <Col lg={8} className="right order-lg-2 order-1">
                             <Row>
-                                {/* {users.map(
-                                    (user, i) => {
-                                        
-                                        return (
-                                            <Col key={i} xs={3} className="box-img">
-                                                <img className="icon" src="./images/WhatsApp.svg" alt="image" />
-                                            </Col>
-                                        )
-                                    }
-                                )} */}
                                 <Col xs={3} className="box-img">
                                     <img className="icon" src="./images/WhatsApp.svg" alt="image" />
                                 </Col>
