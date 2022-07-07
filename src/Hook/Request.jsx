@@ -1,7 +1,7 @@
 
 export const useRequest = () => {
   const Request = async ({ url, form, method = 'POST' }) => {
-    return await fetch('https://zns-api.herokuapp.com/' + url, {
+    return await fetch('https://zns-api.herokuapp.com' + url, {
       method: method,
       body: JSON.stringify(form)
     }).then((resposen) => {

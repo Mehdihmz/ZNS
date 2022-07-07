@@ -7,9 +7,6 @@ function Home() {
 
     const [showAuth, setshowAuth] = useState(false)
 
-
-
-
     return (
         <Fragment>
             <ModalAuth show={showAuth} onHide={() => { setshowAuth(false) }} />
