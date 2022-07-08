@@ -5,6 +5,8 @@ function Header() {
         <div className="header">
             <span className="layer-top"></span>
             <span className="layer-right"></span>
+            <span className="layer-center"></span>
+            <span className="layer-left-bottom"></span>
             <Col className="left" md={5} xl={4}>
                 <h2>
                     Управляйте своими контактами вместе <br /> с ZNS
