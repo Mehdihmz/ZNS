@@ -36,6 +36,12 @@ body {
     }
 }
 
+.modal-backdrop {
+    background: #00142920;
+    opacity: 1 !important;
+    backdrop-filter: blur(4px);
+}
+
 .head-page {
     @media (max-width: 1000px) {
         background: #001429;
@@ -104,6 +110,15 @@ body {
                 &.btn {
                     @media (max-width: 767px) {
                         display: block !important;
+                        border: 1.5px solid $light;
+                        padding: 10px 18px;
+                        border-radius: 15px;
+                    }
+                }
+
+                &.btnlg {
+                    @media (max-width: 767px) {
+                        display: none !important;
                     }
 
                     border: 1.5px solid $light;
@@ -197,6 +212,8 @@ body {
         }
 
         .left {
+            z-index: 100;
+
             @media (max-width: 1000px) {
                 width: 100%;
                 text-align: center;
@@ -222,12 +239,19 @@ body {
                 margin: 32px 0;
             }
 
+            .cover2 {
+                margin-top: 15px;
+                margin-bottom: 35px;
+
+            }
+
             a {
-                margin-top: 6px;
+                margin-top: 20px;
                 padding: 15px 35px;
                 border-radius: 8px;
                 color: $light;
                 background: linear-gradient(274.72deg, #80CAF3 -7.88%, #006FBB 110.37%);
+                display: inline-block;
 
                 @media (max-width: 380px) {
                     font-size: 10px;
@@ -328,8 +352,8 @@ body {
     .map {
         @media (max-width: 1000px) {
             object-fit: cover;
-            height: 550px;
-            padding-bottom: 10rem;
+            height: 750px;
+            padding-bottom: 20rem;
         }
 
         object-fit: contain;
@@ -576,7 +600,7 @@ body {
     }
 }
 
-.section-five {
+.section-four {
     background: #040D21;
     padding: 8rem 1rem;
     color: $light;
@@ -590,18 +614,29 @@ body {
             left: 0%;
             top: 0%;
             z-index: -1;
-            width: 450px;
+            width: 100%;
             height: 330px;
+
+            @media (max-width:1000px) {
+                height: 250px;
+            }
+
             background: linear-gradient(20.16deg, #00123F -30.06%, #194484 43.68%, #39AAC2 123.84%);
             filter: blur(160px);
             transform: matrix(-0.01, 1, -1, 0, 0, 0);
         }
 
         img {
-            width: 450px;
-            height: 336px;
+            max-width: 100%;
             object-fit: contain;
 
+        }
+    }
+
+    .descriptions {
+        @media (max-width:1000px) {
+            margin-top: 30px;
+            text-align: center;
         }
     }
 
@@ -618,6 +653,14 @@ body {
         margin-bottom: 40px;
     }
 
+    .links {
+        display: flex;
+
+        @media (max-width:1000px) {
+            justify-content: center;
+        }
+    }
+
     a {
         margin-right: 16px;
 
@@ -628,6 +671,8 @@ body {
         }
     }
 }
+
+
 
 .modal-content {
     border-radius: 10px;
