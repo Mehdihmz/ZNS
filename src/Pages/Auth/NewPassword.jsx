@@ -1,7 +1,9 @@
 import React from 'react'
 import InputPassword from '../../components/InputPassword'
-
+import { useNewPassword } from '../../Hook/Auth';
+import { Spinner } from 'react-bootstrap'
 const NewPassword = ({ setpage, onHide }) => {
+  const { submitForm, onChange, loading } = useNewPassword()
   return (
     <div className="auth">
       <div className="auth-header">
@@ -16,15 +18,15 @@ const NewPassword = ({ setpage, onHide }) => {
         <p>Придумайте новый и надежный пароль, <br /> который вы нигде не используете</p>
 
 
-        <InputPassword label="Введите новый пароль" placeholder="Введите пароль" />
-        <InputPassword label="Подтвердите пароль" placeholder="Введите пароль" />
+        <InputPassword label="Введите новый пароль" onChange={onChange} name='new_password' placeholder="Введите пароль" />
+        <InputPassword label="Подтвердите пароль" onChange={onChange} name='re_new_password' placeholder="Введите пароль" />
 
         <div className="form-group">
-          <button onClick={() => { setpage('successSendLink') }} className='btn btn-primary'>Зарегистрироваться</button>
+          <button onClick={submitForm} disabled={loading} className='btn btn-primary'>{loading ? <Spinner size="sm" animation="border" /> : "Изменить пароль"}</button>
         </div>
         <div className="text-center">
 
-          <a onClick={() => { setpage('login') }} href="#" style={{ textDecoration: "none" }}>
+          <a onClick={() => { setpage('login') }} style={{ textDecoration: "none" }}>
             <i className='far fa-angle-left'></i>
             <span className='mx-2'>Вернуться назад</span>
           </a>

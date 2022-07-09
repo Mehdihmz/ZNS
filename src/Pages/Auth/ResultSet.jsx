@@ -16,7 +16,7 @@ const ResultSet = ({ onHide, setpage }) => {
                 <h3 className='title text-center'>Поздравляем!</h3>
                 <p className='text-center'>Ваш пароль успешно изменен!</p>
                 <div className="form-group">
-                    <button onClick={() => { setpage('login') }} className='btn btn-primary'>Зарегистрироваться</button>
+                    <button onClick={() => { setpage('login') }} className='btn btn-primary'>Войти в ZNS</button>
                 </div>
             </div>
         </div>

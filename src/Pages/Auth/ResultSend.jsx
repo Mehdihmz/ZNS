@@ -13,7 +13,7 @@ const ResultSend = ({ onHide, setpage }) => {
         <h3 className='title'>Проверьте почту!</h3>
         <p className='box-success'>Проверьте почтовый ящик указанный при регистрации, мы выслали вам инструкции по восстановлению пароля</p>
         <div className="text-center">
-          <a onClick={() => { setpage('login') }} href="#" style={{ textDecoration: "none" }}>
+          <a onClick={() => { setpage('login') }}   style={{ textDecoration: "none" }}>
             <i className='far fa-angle-left'></i>
             <span className='mx-2'>Вернуться назад</span>
           </a>

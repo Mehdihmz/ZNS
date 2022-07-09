@@ -1,13 +1,16 @@
 import React from 'react'
-import { Home, SignUp, Login } from '../Pages'
+import { Home } from '../Pages'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import UserContext from '../Context/UserContext'
 const Router = () => {
     return (
-        <BrowserRouter>
-            <Routes>
-                <Route path="/" element={<Home />} />
-            </Routes>
-        </BrowserRouter>
+        <UserContext>
+            <BrowserRouter>
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                </Routes>
+            </BrowserRouter>
+        </UserContext>
     )
 }
 

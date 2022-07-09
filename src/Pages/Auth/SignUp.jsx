@@ -1,19 +1,10 @@
-import React, { useState } from 'react'
+import React from 'react'
 import InputPassword from '../../components/InputPassword'
-import { useRequest } from '../../Hook/Request';
-
+import { Spinner } from 'react-bootstrap'
+import { useSignUp } from '../../Hook/Auth'
 function SignUp({ onHide, setpage }) {
+    const { btnDisable, loading, onChange, submitForm } = useSignUp();
 
-    const [form, setform] = useState({ email: "", password: "", re_password: "" });
-    const { Request } = useRequest();
-
-    const submitForm = () => {
-        Request({ url: "auth/users", form }).then((resposen) => {
-            if (resposen.status) {
-                setpage('successSendLink')
-            }
-        })
-    }
     return (
         <div className="auth">
             <div className="auth-header">
@@ -31,17 +22,17 @@ function SignUp({ onHide, setpage }) {
 
                 <div className="form-group">
                     <label htmlFor="">Введите адрес электронной почты</label>
-                    <input type="email" onChange={({ target: { value } }) => setform({ ...form, email: value })} className='form-control' placeholder='Введите ваш e-mail' />
+                    <input type="email" name='email' onChange={onChange} className='form-control' placeholder='Введите ваш e-mail' />
                 </div>
-                <InputPassword label="Пароль" tooltip onChange={(value) => { setform({ ...form, password: value, re_password: value }) }} placeholder="Введите пароль" />
+                <InputPassword label="Пароль" tooltip onChange={onChange} placeholder="Введите пароль" />
 
                 <div className="form-group">
-                    <button onClick={submitForm} className='btn btn-primary'>Зарегистрироваться</button>
+                    <button disabled={loading || btnDisable} onClick={submitForm} className='btn btn-primary'>{loading ? <Spinner size="sm" animation="border" /> : "Зарегистрироваться"}</button>
                 </div>
 
                 <div className="form-group">
                     <label className='rule' htmlFor="rule">
-                        <input type="checkbox" name="" id="rule" />
+                        <input type="checkbox" name="rule"  id="rule" />
                         <span>
                             Подтверждаю, что ознакомлен, полностью согласен и принимаю условия <a href="">Пользовательского соглашения</a>
                         </span>

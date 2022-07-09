@@ -12,11 +12,17 @@ function Header() {
                     Управляйте своими контактами вместе <br /> с ZNS
                 </h2>
                 <p>
-                    Регистрируясь в ZNS, вы получаете продукт,
-                    помогающий вам организовать контакты из
+                    Регистрируясь в ZNS, вы получаете продукт,<br />
+                    помогающий вам организовать контакты из<br />
                     социальных сетей, почты и мессенджеров.
                 </p>
+
+                <div className="d-block d-lg-none cover2">
+                    <img src="./images/interface.svg" style={{ maxWidth: "100%" }} alt="cover" />
+                </div>
+
                 <a href="/"> Бесплатная регистрация</a>
+
             </Col>
             <Col className="right" md={6} xl={8}>
                 <img src="./images/cover.svg" alt="cover" />

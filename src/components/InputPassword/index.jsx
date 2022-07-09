@@ -1,29 +1,33 @@
 import React, { useState } from 'react'
+import { checkPassword } from '../../Hook/Auth'
 
-const InputPassword = ({ tooltip, label, onChange = () => { }, placeholder }) => {
+const InputPassword = ({ tooltip, name = "password", label, onChange = () => { }, placeholder }) => {
     const [level, setLevel] = useState(0)
     const [message, setmessage] = useState()
     const [capslock, setCapsLock] = useState(0)
     const [hidePass, sethidePass] = useState(false)
-    const validatePassword = ({ target }) => {
-        onChange(target.value)
-        if (String(target.value).length >= 8) {
-            setmessage('Надежный пароль');
-            setLevel(3)
-            if (String(target.value).length >= 12) {
-                setLevel(4)
-            }
+    const validatePassword = (e) => {
+        onChange(e)
+        const { target } = e;
+        if (!checkPassword(target.value)) {
+            setLevel(1)
+            setmessage('Популярный пароль, его легко взломать');
         } else {
-            if (String(target.value).length >= 4) {
+            if (String(target.value).length == 8) {
                 setLevel(2)
                 setmessage('Слишком короткий пароль, добавьте еще символы');
-            } else {
-                setLevel(1)
-                setmessage('Популярный пароль, его легко взломать');
             }
-            if (String(target.value).length == 0) {
-                setLevel(0);
-                setmessage();
+            if (String(target.value).length > 8) {
+                setmessage('Надежный пароль');
+                setLevel(3)
+                if (String(target.value).length >= 12) {
+                    setLevel(4)
+                }
+            } else {
+                if (String(target.value).length == 0) {
+                    setLevel(0);
+                    setmessage();
+                }
             }
         }
     }
@@ -41,7 +45,7 @@ const InputPassword = ({ tooltip, label, onChange = () => { }, placeholder }) =>
                 <i className='far fa-info-circle'></i>
                 : null}</label>
             <div className='input-password'>
-                <input type={`${hidePass ? "text" : "password"}`} onChange={validatePassword} className='form-control' onKeyDown={onKeyDown} placeholder={placeholder} />
+                <input type={`${hidePass ? "text" : "password"}`} name={name} onChange={validatePassword} className='form-control' onKeyDown={onKeyDown} placeholder={placeholder} />
                 <i onClick={() => { sethidePass(!hidePass) }} className={`icon fal fa-eye${hidePass ? "" : "-slash"}`}></i>
                 {capslock ? <span>CAPS LOCK</span> : null}
             </div>

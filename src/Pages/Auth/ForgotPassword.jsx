@@ -1,7 +1,8 @@
 import React from 'react'
-
+import { useResetPassword } from '../../Hook/Auth';
+import { Spinner } from 'react-bootstrap'
 const ForgotPassword = ({ setpage, onHide }) => {
-
+    const { submitForm, onChange, loading } = useResetPassword(setpage);
     return (
         <div className="auth">
             <div className="auth-header">
@@ -16,15 +17,15 @@ const ForgotPassword = ({ setpage, onHide }) => {
                 <p>Введите почтовый ящик, указанный при регистрации и  мы пришлем вам инструкцию по восстановлению пароля</p>
                 <div className="form-group">
                     <label htmlFor="">Введите адрес электронной почты</label>
-                    <input type="text" className='form-control' placeholder='Введите ваш e-mail' />
+                    <input type="email" onChange={onChange} name="email" className='form-control' placeholder='Введите ваш e-mail' />
                 </div>
 
                 <div className="form-group">
-                    <button onClick={() => { setpage('successSendLink') }} className='btn btn-primary'>Зарегистрироваться</button>
+                    <button onClick={submitForm} disabled={loading} className='btn btn-primary'>{loading ? <Spinner size="sm" animation="border" /> : "Сбросить пароль"}</button>
                 </div>
                 <div className="text-center">
 
-                    <a onClick={() => { setpage('login') }} href="#" style={{ textDecoration: "none" }}>
+                    <a onClick={() => { setpage('login') }}   style={{ textDecoration: "none" }}>
                         <i className='far fa-angle-left'></i>
                         <span className='mx-2'>Вернуться назад</span>
                     </a>

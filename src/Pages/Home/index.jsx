@@ -9,9 +9,9 @@ function Home() {
 
     return (
         <Fragment>
-            <ModalAuth show={showAuth} onHide={() => { setshowAuth(false) }} />
+            <ModalAuth show={showAuth} page={showAuth} onHide={() => { setshowAuth(false) }} />
             <header className="head-page">
-                <Navbar showModal={() => { setshowAuth(true) }} />
+                <Navbar showModal={(page) => { setshowAuth(page) }} />
                 <Header />
             </header>
             <section className="section-one">
@@ -41,6 +41,16 @@ function Home() {
                         </Col>
                         <Col lg={8} className="right order-lg-2 order-1">
                             <Row>
+                                {/* {users.map(
+                                    (user, i) => {
+                                        
+                                        return (
+                                            <Col key={i} xs={3} className="box-img">
+                                                <img className="icon" src="./images/WhatsApp.svg" alt="image" />
+                                            </Col>
+                                        )
+                                    }
+                                )} */}
                                 <Col xs={3} className="box-img">
                                     <img className="icon" src="./images/WhatsApp.svg" alt="image" />
                                 </Col>
@@ -157,17 +167,21 @@ function Home() {
                     </Splide>
 
                 </Container>
+
+
+
             </section>
-            <section className="section-five">
+
+            <section className="section-four">
                 <Container>
-                    <Row className="justify-content-end">
-                        <Col lg={8} className="phones">
+                    <Row className="justify-content-around">
+                        <Col lg={4} className="phones text-center">
                             <img src="./images/Iphone.svg" alt="" />
                             <div className="layer-light" />
                         </Col>
-                        <Col lg={4}>
+                        <Col lg={4} className="descriptions">
                             <h2>Скачай приложение ZNS на iOS или Android </h2>
-                            <p>Скачайте ZNS и присоединяйтесь к десяткам миллионов пользователей. Оцените удобный сервис общения, поиска контактов и планирования своих задач.</p>
+                            <p>Скачайте ZNS и присоединяйтесь к десяткам <br /> миллионов пользователей. Оцените удобный сервис <br /> общения, поиска контактов и планирования своих <br /> задач.</p>
                             <div className="links">
                                 <a href="/"><img src="./images/AppleAppStore.svg" alt="" /></a>
                                 <a href="/"><img src="./images/googleplay.svg" alt="" /></a>

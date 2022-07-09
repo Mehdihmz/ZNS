@@ -1,7 +1,10 @@
-
+const BASEURL = 'https://zns-api.herokuapp.com/';
 export const useRequest = () => {
   const Request = async ({ url, form, method = 'POST' }) => {
-    return await fetch('https://zns-api.herokuapp.com' + url, {
+    return await fetch(BASEURL + url, {
+      headers: {
+        "Content-type": "application/json",
+      },
       method: method,
       body: JSON.stringify(form)
     }).then((resposen) => {

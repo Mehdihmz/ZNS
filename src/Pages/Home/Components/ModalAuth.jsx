@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Modal } from 'react-bootstrap'
 import ForgotPassword from '../../Auth/ForgotPassword';
 import Login from '../../Auth/Login';
@@ -7,7 +7,14 @@ import ResultSend from '../../Auth/ResultSend';
 import ResultSet from '../../Auth/ResultSet';
 import SignUp from '../../Auth/SignUp'
 const ModalAuth = (props) => {
+    
     const [page, setpage] = useState('login');
+    useEffect(() => {
+        if (props.page) {
+            setpage(props.page)
+        }
+    }, [props])
+
     const render = () => {
         switch (page) {
             case 'login':
@@ -31,7 +38,7 @@ const ModalAuth = (props) => {
         }
     }
     return (
-        <Modal {...props} aria-labelledby="contained-modal-title-vcenter">
+        <Modal centered {...props} aria-labelledby="contained-modal-title-vcenter">
             <Modal.Body className="show-grid auth-modal">
                 {render()}
             </Modal.Body>
